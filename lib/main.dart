@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
 import 'package:expensive_tracker/widgets/expenses.dart';
+import 'package:flutter/services.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.landscapeRight
+  ]);
+
 
 
   var kColorScheme = ColorScheme.fromSeed(
@@ -11,7 +17,7 @@ void main() {
 
 var kDarkColorScheme = ColorScheme.fromSeed(
   brightness: Brightness.dark,
-  seedColor: Color.fromARGB(255, 4, 58, 35),
+  seedColor: Color.fromARGB(255, 2, 68, 40),
 );
  
  runApp(
